@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 const Hero = () => {
     const [isVisible, setIsVisible] = useState(true);
@@ -25,16 +26,22 @@ const Hero = () => {
                 <h1 className="">Karsten Assoua</h1>
                 <h2>is a software developer and designer who loves building elegant solutions for complex problems.</h2>
                 <div className="text-[20px]/7">
-                    <p className=''>Currently studying <em>Computer Science</em> and <em>Behavioral Decision Sciences</em> @ <a href="https://www.brown.edu">Brown University</a></p>
-                    <p className="">Previously @ <a href="https://www.clevelandfed.org/">United States Federal Reserve</a></p>
+                    <p>Currently studying <em>Computer Science</em> and <em>Behavioral Decision Sciences</em> @ <a href="https://www.brown.edu">Brown University</a></p>
+                    <p>Previously @ <a href="https://www.clevelandfed.org/">United States Federal Reserve</a></p>
                 </div>
             </div>
             <div
                 className={`w-full h-48 place-items-end py-10`}
             >
-                <img src='/images/mouse.png' alt="Scroll Indicator" className={`transition-opacity duration-300 ${
-                    isVisible ? 'opacity-100 animate-bounce ease-in' : 'opacity-0'
-                }`} />
+                <Image 
+                    src='/images/mouse.png' 
+                    alt="Scroll!" 
+                    width={24} 
+                    height={24}
+                    className={`transition-opacity duration-300 ${
+                        isVisible ? 'opacity-100 animate-bounce ease-in' : 'opacity-0'
+                    }`} 
+                />
             </div>
         </section>
     );

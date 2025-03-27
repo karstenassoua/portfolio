@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import React from 'react';
 
 const Card = ({ image, projectName, url, skills, description, isAwarded, projectLink }) => {
@@ -7,9 +8,11 @@ const Card = ({ image, projectName, url, skills, description, isAwarded, project
           <div className="">
                 {/* Image Section */}
                 <div className="h-80">
-                    <img
+                    <Image
                         src={image}
-                        alt={projectName}
+                        alt="Portfolio image"
+                        width={600}
+                        height={350}
                         className="w-full h-full rounded-2xl object-cover"
                     />
                 </div>

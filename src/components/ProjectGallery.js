@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import PropTypes from 'prop-types';
 
 const ProjectGallery = ({ imageUrls }) => {
@@ -6,7 +7,14 @@ const ProjectGallery = ({ imageUrls }) => {
         <div className="flex flex-wrap gap-6 mx-27 my-20 justify-center">
             {imageUrls
                 .map((url, index) => (
-                    <img key={index} src={url} alt={`Gallery item ${index + 1}`} className="transition-transform hover:rotate-1 max-w-7/16 rounded-xl" />
+                    <Image 
+                        key={index} 
+                        src={url} 
+                        alt="Portfolio image" 
+                        width={600} 
+                        height={350}
+                        className="transition-transform hover:rotate-1 max-w-7/16 rounded-xl" 
+                    />
                 ))}
         </div>
     );

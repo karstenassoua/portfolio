@@ -5,6 +5,7 @@ import ProjectHero from "@/components/ProjectHero";
 import ProjectStack from "@/components/ProjectStack";
 import "../../styles/globals.css";
 import ProjectCarousel from "@/components/ProjectCarousel";
+import ProjectGallery from "@/components/ProjectGallery";
 
 export default function Pascal() {
   return (
@@ -30,11 +31,11 @@ export default function Pascal() {
           outcomes={"I created a functional prototype that delivers educational content through a clean and accessible interface. Along the way, I developed full-stack skills and implemented features that laid the groundwork for future functionality like authentication and cloud integration."} 
           reflection={"This project taught me how to manage an end-to-end development process on my own—from ideation to deployment. I strengthened my skills in Node.js, Express.js, and UI design, and learned how to create educational content that puts user experience first."}
         />
-        <ProjectCarousel imageUrls={["/images/pascal/achieve.png", "/images/pascal/Community.png", 
-            "/images/pascal/Landing.png", "/images/pascal/Friends.png",
-            "/images/pascal/Lessons.png", "/images/pascal/Home.png",
-            "/images/pascal/Search.png", "/images/pascal/Signup.png",
+        <ProjectCarousel imageUrls={["/images/pascal/Landing.png", "/images/pascal/Signup.png", "/images/pascal/Home.png", "/images/pascal/achieve.png", "/images/pascal/Friends.png", "/images/pascal/Community.png", 
+            "/images/pascal/Lessons.png",
+            "/images/pascal/Search.png",
             "/images/pascal/Subject.png"]}/>
+        <ProjectGallery imageUrls={["/images/pascal/maths.jpg", "/images/pascal/gallery.jpg", "/images/pascal/leaderboard.jpg", "/images/pascal/videos.png"]}/>
       </main>
       <Footer/>
     </>

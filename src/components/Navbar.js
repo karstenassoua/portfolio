@@ -1,11 +1,18 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 const Navbar = () => {
     return (
         <header className="flex flex-row w-full justify-between mx-10 fixed z-10">
             <Link href="/">
-                <img className="max-w-15 py-3" src="/images/signature.svg"></img>
+                <Image 
+                    src="/images/signature.svg" 
+                    alt="Karsten!" 
+                    width={50} 
+                    height={25}
+                    className="max-w-15 py-3" 
+                />
             </Link>
             <div className='w-sm border-1 border-neutral-800 bg-neutral-950 justify-self-center my-2.5 px-5 py-3 rounded-2xl'>
                 <nav className="flex flex-row gap-7 justify-center text-neutral-500">
