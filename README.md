@@ -1,2 +1,1 @@
-# portfolio
-Dev and design portfolio
+Thank you for visitng my portfolio!
