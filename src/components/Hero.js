@@ -21,7 +21,7 @@ const Hero = () => {
     }, []);
 
     return (
-        <section className='mx-55'>
+        <section className='mx-[15%]'>
             <div className="flex flex-col gap-3.5 my-10 pt-70 pb-20 text-left text-5xl text-neutral-400">
                 <h1 className="">Karsten Assoua</h1>
                 <h2>is a software developer and designer who loves building elegant solutions for complex problems.</h2>

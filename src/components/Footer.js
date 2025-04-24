@@ -5,10 +5,10 @@ const Footer = () => {
     return (
         <>
             <hr />
-            <footer className="flex flex-row w-full bg-neutral-950 min-h-fit min-w-fit px-50 py-17 gap-10 justify-between">
-                <div className="flex flex-col gap-3.5 ">
+            <footer className="flex flex-col md:flex-row w-full bg-neutral-950 min-h-fit min-w-fit px-[15%] py-17 gap-10 justify-between">
+                <div className="flex flex-col items-center md:items-start gap-3.5 ">
                     {/* left */}
-                    <h1 className="text-3xl">Thank you for visiting!</h1>
+                    <h1 className="text-3xl md:justify-left">Thank you for visiting!</h1>
                     <div className="flex flex-row gap-3.5 items-center">
                         <h2>Let's work together.</h2>
                         <div className="flex flex-row gap-3.5 min-h-fit min-w-fit fit-left">
@@ -19,7 +19,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-row gap-6.5 items-center">
+                <div className="flex flex-wrap md:flex-nowrap md:flex-row gap-6.5 justify-center md:justify-left items-center">
                     {/* Selected Work */}
                     <Link href="/jwr">JWR Computing</Link>
                     <Link href="/pascal">Pascal</Link>

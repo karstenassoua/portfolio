@@ -4,21 +4,21 @@ import Image from 'next/image';
 const Project = ({projectName, heroImg, role, timeline, description, team, skills, tech}) => {
     return (
         <>
-            <div className="flex flex-col gap-15 mx-30 py-27">
-                <div className="flex flex-row items-center gap-20">
-                    <div className='flex flex-col max-w-5/12'>
+            <div className="flex flex-col gap-15 mx-[15%] py-27">
+                <div className="flex flex-col md:flex-row items-center gap-20">
+                    <div className='flex flex-col lg:max-w-5/12'>
                         <h4 className='uppercase text-neutral-400 font-md'>{projectName}</h4>
                         <h2>{description}</h2>
                     </div>
                     <Image 
                         src={heroImg} 
                         alt="Portfolio image" 
-                        className="hover:rotate-2 transition-transform max-w-7/12 rounded-2xl"
+                        className="hover:rotate-2 transition-transform md:max-w-7/12 rounded-2xl"
                         width={600}
                         height={350}
                     />
                 </div>
-                <div className='flex flex-row gap-10 justify-between'>
+                <div className='flex flex-wrap md:flex-row gap-10 justify-between'>
                     <div className='flex flex-col gap-3'>
                         <h3 className="uppercase text-neutral-400 font-light">Role</h3>
                         <p >{role}</p>

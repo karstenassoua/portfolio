@@ -13,7 +13,7 @@ const ProjectGallery = ({ imageUrls }) => {
                         alt="Portfolio image" 
                         width={600} 
                         height={350}
-                        className="transition-transform hover:rotate-1 max-w-7/16 rounded-xl" 
+                        className="transition-transform hover:rotate-1 md:max-w-7/16 rounded-xl" 
                     />
                 ))}
         </div>

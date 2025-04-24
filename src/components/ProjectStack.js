@@ -12,13 +12,13 @@ const ProjectStack = ({ context, problem, solution, process, outcomes, reflectio
 
     return (
         <>
-            <div className="flex flex-col max-w-4/6 gap-4 justify-self-center">
+            <div className="flex flex-col max-w-4/6 gap-10 justify-self-center">
                 {sections.map((section, index) => (
-                    <div key={index} className="flex flex-row min-w-3/4">
-                        <div className="w-1/3">
+                    <div key={index} className="flex flex-col md:flex-row min-w-3/4">
+                        <div className="md:w-1/3">
                             <h2 className="font-bold">{section.title}</h2>
                         </div>
-                        <div className="w-2/3">
+                        <div className="md:w-2/3">
                             <p>{section.content}</p>
                         </div>
                     </div>

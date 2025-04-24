@@ -5,7 +5,7 @@ export default function Gallery() {
     return (
         <>
             <div id="projects" className="flex flex-col gap-10">
-                <div className="flex flex-row gap-8 mx-30">
+                <div className="flex flex-col md:flex-row gap-8 mx-[12%]">
                     <Card 
                         image={"/images/pottery/pottery.png"} 
                         projectName={"Pottery @ Brown"} 
@@ -21,7 +21,7 @@ export default function Gallery() {
                         description={"Designed a math web and mobile app meant to be a resource for students to self-study math, get help with questions, and challenge themselves."}
                         isAwarded={true}/>
                 </div>
-                <div className="flex flex-row gap-8 mx-30">
+                <div className="flex flex-col md:flex-row gap-8 mx-[12%]">
                     {/* <Card 
                         image={"/images/converse/converse.png"} 
                         projectName={"Converse"} 
