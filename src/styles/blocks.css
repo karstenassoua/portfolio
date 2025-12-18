@@ -1,0 +1,404 @@
+/* Block System - Centralized Styling and Layout Primitives */
+
+/* ============================================================================
+   BASE BLOCK STYLES
+   ============================================================================ */
+
+/* Base container for all blocks - ensures consistent spacing and width */
+.block {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Main page container - wraps all blocks with shared constraints */
+.blocks-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem; /* 48px between blocks */
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .blocks-container {
+    padding: 2rem;
+    gap: 3.5rem; /* Increased gap on larger screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .blocks-container {
+    padding: 3rem;
+  }
+}
+
+/* ============================================================================
+   TEXT BLOCK STYLES
+   ============================================================================ */
+
+.text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.text-block__heading {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.text-block__content {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--foreground);
+  margin: 0;
+}
+
+.text-block__content a {
+  color: var(--foreground);
+  text-decoration: underline;
+  transition: opacity 0.3s ease;
+}
+
+.text-block__content a:hover {
+  opacity: 0.7;
+}
+
+/* ============================================================================
+   IMAGE BLOCK STYLES
+   ============================================================================ */
+
+.image-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.image-block__wrapper {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  position: relative;
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.image-block__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.image-block__img:hover {
+  opacity: 0.95;
+}
+
+.image-block__caption {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: rgba(50, 64, 79, 0.584);
+  margin: 0;
+}
+
+/* ============================================================================
+   VIDEO BLOCK STYLES
+   ============================================================================ */
+
+.video-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.video-block__wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  position: relative;
+  border-radius: 0.5rem;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-block__loading {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  border: 0.625px solid rgba(50, 64, 79, 0.1);
+}
+
+.video-block__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.video-block__video[data-loaded="true"] {
+  opacity: 1;
+}
+
+.video-block__caption {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: rgba(50, 64, 79, 0.584);
+  margin: 0;
+}
+
+/* ============================================================================
+   GALLERY BLOCK STYLES
+   ============================================================================ */
+
+.gallery-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.gallery-block__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .gallery-block__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery-block__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.gallery-block__item {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  position: relative;
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.gallery-block__item:hover {
+  transform: rotate(1deg) scale(1.02);
+}
+
+.gallery-block__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.gallery-block__caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+  color: white;
+  padding: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-block__item:hover .gallery-block__caption {
+  opacity: 1;
+}
+
+/* ============================================================================
+   SPECS BLOCK STYLES
+   ============================================================================ */
+
+.specs-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--color-neutral-800);
+  border-radius: 0.5rem;
+}
+
+.specs-block__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .specs-block__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .specs-block__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.specs-block__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.specs-block__key {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(50, 64, 79, 0.584);
+  font-weight: 600;
+  margin: 0;
+}
+
+.specs-block__value {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--foreground);
+  margin: 0;
+  font-weight: 500;
+}
+
+/* ============================================================================
+   RICH SECTION BLOCK STYLES
+   ============================================================================ */
+
+.rich-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.rich-section--beside {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  .rich-section--beside {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.rich-section__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.rich-section__heading {
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.rich-section__text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--foreground);
+  margin: 0;
+}
+
+.rich-section__text a {
+  color: var(--foreground);
+  text-decoration: underline;
+  transition: opacity 0.3s ease;
+}
+
+.rich-section__text a:hover {
+  opacity: 0.7;
+}
+
+.rich-section__media {
+  width: 100%;
+}
+
+.rich-section__media img,
+.rich-section__media video {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+/* ============================================================================
+   RESPONSIVE UTILITIES
+   ============================================================================ */
+
+@media (max-width: 640px) {
+  .blocks-container {
+    gap: 2.5rem;
+    padding: 1rem;
+  }
+
+  .rich-section__heading {
+    font-size: 1.5rem;
+  }
+
+  .rich-section__text {
+    font-size: 0.95rem;
+  }
+}
+
+/* ============================================================================
+   ANIMATIONS
+   ============================================================================ */
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.block--animated {
+  animation: fadeIn 0.3s ease-in-out;
+}
