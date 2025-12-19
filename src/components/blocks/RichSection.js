@@ -38,9 +38,6 @@ export default function RichSection({
     sectionClass = 'rich-section--beside';
   }
 
-  // Check if imageAfter should be positioned beside text
-  const imageAfterBeside = mediaPosition === 'beside' && imageAfter && imageAfter.src;
-
   // Render the text content (heading + paragraph)
   const textContent = (
     <div className="rich-section__text-wrapper">
@@ -63,9 +60,10 @@ export default function RichSection({
     );
   }
 
-  // Render the content section
+  // Determine layout for content based on mediaPosition
   let contentSection;
-  if (imageAfterBeside && imageAfterSection) {
+
+  if (mediaPosition === 'beside' && imageAfterSection) {
     // Side-by-side layout for text and imageAfter
     contentSection = (
       <div className="rich-section__content rich-section__content--beside">
@@ -73,8 +71,16 @@ export default function RichSection({
         {imageAfterSection}
       </div>
     );
+  } else if (mediaPosition === 'top' && imageAfterSection) {
+    // ImageAfter above text
+    contentSection = (
+      <div className="rich-section__content">
+        {imageAfterSection}
+        {textContent}
+      </div>
+    );
   } else {
-    // Default layout: imageAfter below text
+    // Default: imageAfter below text
     contentSection = (
       <div className="rich-section__content">
         {textContent}
