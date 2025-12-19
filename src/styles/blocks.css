@@ -356,6 +356,25 @@
   margin: 0;
 }
 
+.rich-section__text p {
+  margin: 0 0 1rem 0;
+  line-height: 1.6;
+}
+
+.rich-section__text p:last-child {
+  margin-bottom: 0;
+}
+
+.rich-section__text strong {
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.rich-section__text em {
+  font-style: italic;
+  color: var(--foreground);
+}
+
 .rich-section__text a {
   color: var(--foreground);
   text-decoration: underline;
