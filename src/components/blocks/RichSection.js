@@ -39,6 +39,15 @@ export default function RichSection({
     <div className="rich-section__content">
       {heading && <h2 className="rich-section__heading">{heading}</h2>}
       <p className="rich-section__text">{content}</p>
+      {imageAfter && imageAfter.src && (
+        <div className="rich-section__image-after">
+          <ImageBlock
+            src={imageAfter.src}
+            alt={imageAfter.alt || 'Section image'}
+            caption={imageAfter.caption}
+          />
+        </div>
+      )}
     </div>
   );
 
