@@ -83,6 +83,7 @@ export default function BlockRenderer({ blocks }) {
                 content={block.content}
                 media={block.media}
                 mediaPosition={block.mediaPosition}
+                imageAfter={block.imageAfter}
               />
             );
 
