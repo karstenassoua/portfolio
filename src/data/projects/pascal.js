@@ -55,6 +55,11 @@ export const pascalData = {
       content:
         'I built Pascal using HTML, CSS, JavaScript, and Pug, along with Node.js, Express.js, and Bootstrap. I coded everything in Visual Studio Code, learning new frameworks and debugging as I went.',
       mediaPosition: 'none',
+      imageAfter: {
+        src: '/images/pascal/leaderboard.jpg',
+        alt: 'Pascal leaderboard engagement feature',
+        caption: 'Building engagement through gamification',
+      },
     },
     {
       type: 'richSection',
