@@ -67,6 +67,11 @@ export const pascalData = {
       content:
         'I created a functional prototype that delivers educational content through a clean and accessible interface. Along the way, I developed full-stack skills and implemented features that laid the groundwork for future functionality like authentication and cloud integration.',
       mediaPosition: 'none',
+      imageAfter: {
+        src: '/images/pascal/Home.png',
+        alt: 'Pascal home dashboard showcasing outcomes',
+        caption: 'Clean and accessible interface for learners',
+      },
     },
     {
       type: 'richSection',
