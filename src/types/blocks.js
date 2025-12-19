@@ -58,7 +58,7 @@
  * @typedef {Object} RichSectionData
  * @property {'richSection'} type
  * @property {string} [heading] - Optional heading
- * @property {string} content - Main text content
+ * @property {string} content - Main text content (supports Markdown: **bold**, *italic*, \n for line breaks, [link](url))
  * @property {ImageBlockData | VideoBlockData} [media] - Optional media (image or video)
  * @property {'top' | 'bottom' | 'beside'} [mediaPosition] - Position of media (default: 'bottom')
  * @property {ImageAfterData} [imageAfter] - Optional image to display after text content
