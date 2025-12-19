@@ -19,6 +19,11 @@ export const pascalData = {
       content:
         'I created Pascal to address the lack of intuitive, accessible math learning platforms. Many students, especially those studying independently, are underserved by existing tools. I wanted to build something that made learning math simpler and more engaging.',
       mediaPosition: 'none',
+      imageAfter: {
+        src: '/images/pascal/maths.jpg',
+        alt: 'Pascal math interface for learning',
+        caption: 'Building intuitive math learning experiences',
+      },
     },
     {
       type: 'richSection',
