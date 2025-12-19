@@ -32,9 +32,9 @@ export default function RichSection({
     return null;
   }
 
-  // Determine section class based on mediaPosition and what media we have
+  // Determine section class based on mediaPosition (only applies to main media field)
   let sectionClass = 'rich-section';
-  if (mediaPosition === 'beside' && (media || imageAfter)) {
+  if (mediaPosition === 'beside' && media) {
     sectionClass = 'rich-section--beside';
   }
 
