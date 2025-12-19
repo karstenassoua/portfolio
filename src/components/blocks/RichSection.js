@@ -14,6 +14,10 @@ import VideoBlock from './VideoBlock';
  * @param {string} [props.media.alt] - Alt text for image media
  * @param {string} [props.media.caption] - Optional caption for media
  * @param {'top' | 'bottom' | 'beside'} [props.mediaPosition] - Position of media (default: 'bottom')
+ * @param {object} [props.imageAfter] - Optional image to display after the text content
+ * @param {string} [props.imageAfter.src] - Image source URL
+ * @param {string} [props.imageAfter.alt] - Alt text for the image
+ * @param {string} [props.imageAfter.caption] - Optional caption for the image
  * @returns {JSX.Element}
  */
 export default function RichSection({
@@ -21,6 +25,7 @@ export default function RichSection({
   content,
   media,
   mediaPosition = 'bottom',
+  imageAfter,
 }) {
   if (!content) {
     console.warn('RichSection: content prop is required');
