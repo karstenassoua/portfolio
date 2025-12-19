@@ -79,6 +79,11 @@ export const pascalData = {
       content:
         'This project taught me how to manage an end-to-end development process on my own—from ideation to deployment. I strengthened my skills in Node.js, Express.js, and UI design, and learned how to create educational content that puts user experience first.',
       mediaPosition: 'none',
+      imageAfter: {
+        src: '/images/pascal/Landing.png',
+        alt: 'Pascal landing page showcasing the final product',
+        caption: 'The final polished product and learning outcome',
+      },
     },
     {
       type: 'gallery',
