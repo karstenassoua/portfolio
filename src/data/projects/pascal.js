@@ -17,7 +17,7 @@ export const pascalData = {
       type: 'richSection',
       heading: 'Context',
       content:
-        'I created **Pascal** to address the lack of *intuitive*, *accessible* math learning platforms. Many students, especially those studying independently, are underserved by existing tools.\n\nI wanted to build something that made learning math simpler and more engaging.',
+        "As a student and tutor, I've repeatedly heard kids express a belief that they're \"just not good at math,\" or that they're not \"a math person.\" Young girls especially often internalize the belief that some fields—namely STEM fields—are just for \"really, really smart\" people and not for them. Their aversion to math wasn't about their ability, it was about their identity in the space. They mentioned that even though tools like Khan Academy and IXL taught them the content, they felt like they had to push themselves to come back and struggle alone to make headway on difficult concepts. I created Pascal to address the lack of intuitive, accessible math learning platforms. Many students, especially those studying independently, are underserved by existing tools. I wanted to build something that made learning math simpler and more engaging—something that treated math learning as a social system rather than isolated content consumption.",
       mediaPosition: 'beside',
       imageAfter: {
         src: '/images/pascal/maths.jpg',
