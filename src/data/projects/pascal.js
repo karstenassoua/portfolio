@@ -43,6 +43,11 @@ export const pascalData = {
       content:
         'Pascal is a web-based math resource I built to help students around the world self-study, get help with questions, and challenge themselves through clear video tutorials and guided walkthroughs.',
       mediaPosition: 'none',
+      imageAfter: {
+        src: '/images/pascal/videos.png',
+        alt: 'Pascal video tutorials section',
+        caption: 'Comprehensive video tutorials and guided learning',
+      },
     },
     {
       type: 'richSection',
