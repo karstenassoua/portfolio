@@ -48,12 +48,20 @@
  */
 
 /**
+ * @typedef {Object} ImageAfterData
+ * @property {string} src - Image source URL
+ * @property {string} alt - Alt text for accessibility
+ * @property {string} [caption] - Optional caption for the image
+ */
+
+/**
  * @typedef {Object} RichSectionData
  * @property {'richSection'} type
  * @property {string} [heading] - Optional heading
  * @property {string} content - Main text content
  * @property {ImageBlockData | VideoBlockData} [media] - Optional media (image or video)
  * @property {'top' | 'bottom' | 'beside'} [mediaPosition] - Position of media (default: 'bottom')
+ * @property {ImageAfterData} [imageAfter] - Optional image to display after text content
  */
 
 /**
