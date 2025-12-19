@@ -32,24 +32,56 @@ export default function RichSection({
     return null;
   }
 
-  const sectionClass = mediaPosition === 'beside' ? 'rich-section--beside' : 'rich-section';
+  // Determine section class based on mediaPosition and what media we have
+  let sectionClass = 'rich-section';
+  if (mediaPosition === 'beside' && (media || imageAfter)) {
+    sectionClass = 'rich-section--beside';
+  }
 
-  // Render the content section
-  const contentSection = (
-    <div className="rich-section__content">
+  // Check if imageAfter should be positioned beside text
+  const imageAfterBeside = mediaPosition === 'beside' && imageAfter && imageAfter.src;
+
+  // Render the text content (heading + paragraph)
+  const textContent = (
+    <div className="rich-section__text-wrapper">
       {heading && <h2 className="rich-section__heading">{heading}</h2>}
       <p className="rich-section__text">{content}</p>
-      {imageAfter && imageAfter.src && (
-        <div className="rich-section__image-after">
-          <ImageBlock
-            src={imageAfter.src}
-            alt={imageAfter.alt || 'Section image'}
-            caption={imageAfter.caption}
-          />
-        </div>
-      )}
     </div>
   );
+
+  // Render imageAfter if it should be placed
+  let imageAfterSection = null;
+  if (imageAfter && imageAfter.src) {
+    imageAfterSection = (
+      <div className="rich-section__image-after">
+        <ImageBlock
+          src={imageAfter.src}
+          alt={imageAfter.alt || 'Section image'}
+          caption={imageAfter.caption}
+        />
+      </div>
+    );
+  }
+
+  // Render the content section
+  let contentSection;
+  if (imageAfterBeside && imageAfterSection) {
+    // Side-by-side layout for text and imageAfter
+    contentSection = (
+      <div className="rich-section__content rich-section__content--beside">
+        {textContent}
+        {imageAfterSection}
+      </div>
+    );
+  } else {
+    // Default layout: imageAfter below text
+    contentSection = (
+      <div className="rich-section__content">
+        {textContent}
+        {imageAfterSection}
+      </div>
+    );
+  }
 
   // Render media if provided
   let mediaSection = null;
