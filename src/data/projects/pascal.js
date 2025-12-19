@@ -53,6 +53,29 @@ I aimed to address all of these pains and gaps with Pascal. If math felt social 
         caption: 'Making math more accessible and approachable',
       },
     },
+        {
+      type: 'richSection',
+      heading: 'Problem',
+      content:`Many math learning platforms are clunky, overwhelming, and dependent on external enforcement from teachers, parents, and grades. This makes self-directed learning, especially for students with low self-belief, fragile, discouraging, and short-lived. 
+I wondered if I could change that. 
+  
+I analyzed competitors in my space, namely Khan Academy, IXL, and YouTube content creators, to build a solution that truly addressed students' pains. Khan Academy had best-in-class educational content and strong curricula for progression, but it is primarily a solo, static learning platform.
+
+Further, because it relies on home-grown content, it is difficult to expand out to new relevant areas or down to niche important topics. I found this specifically a problem when I was using Khan Academy to study for my SAT, for example.
+
+IXL also had strong curricula matched with Common Core standards, but my user interviews revealed that it brought on a lot of stress for students. Students testified that IXL prioritized correctness with punitive feedback loops, and wasn't engaging or approachable—without enforcement from parents and teachers, they weren't going to use it.
+
+And though YouTube creators had a vast array of content for different niches and problems, finding accurate creators is difficult and information is fragmented across the Internet. There's no learning system, progression, or feedback. 
+
+I aimed to address all of these pains and gaps with Pascal. If math felt social instead of isolating, fun instead of punitive, and adaptive instead of standardized—would students spend more of their free time learning math and build their confidence and ability through small wins?
+`,
+      mediaPosition: 'beside',
+      imageAfter: {
+        src: '/images/pascal/gallery.jpg',
+        alt: 'Pascal gallery view for visual learning',
+        caption: 'Making math more accessible and approachable',
+      },
+    },
     {
       type: 'richSection',
       heading: 'Solution',
