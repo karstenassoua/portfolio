@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
 import ImageBlock from './ImageBlock';
 import VideoBlock from './VideoBlock';
 
@@ -42,7 +43,9 @@ export default function RichSection({
   const textContent = (
     <div className="rich-section__text-wrapper">
       {heading && <h2 className="rich-section__heading">{heading}</h2>}
-      <p className="rich-section__text">{content}</p>
+      <div className="rich-section__text">
+        <ReactMarkdown>{content}</ReactMarkdown>
+      </div>
     </div>
   );
 
