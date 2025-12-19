@@ -31,6 +31,11 @@ export const pascalData = {
       content:
         'Most math platforms are clunky, confusing, or inaccessible to students without strong institutional support, making self-study difficult and discouraging.',
       mediaPosition: 'none',
+      imageAfter: {
+        src: '/images/pascal/gallery.jpg',
+        alt: 'Pascal gallery view for visual learning',
+        caption: 'Making math more accessible and approachable',
+      },
     },
     {
       type: 'richSection',
