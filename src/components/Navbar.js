@@ -18,7 +18,7 @@ const Navbar = () => {
                 <nav className="flex flex-row gap-7 justify-center text-neutral-500">
                     <Link href="/#projects">Projects</Link>
                     <Link href="/">About</Link>
-                    <Link href="https://drive.google.com/file/d/1IY0G42V3u7-O5kO3Dqj11DOsMajqjZPw/view?usp=sharing/export?format=pdf">Resume</Link>
+                    <Link href="For direct download: https://drive.google.com/uc?export=download&id=1IY0G42V3u7-O5kO3Dqj11DOsMajqjZPw">Resume</Link>
                 </nav>
             </div>
 
