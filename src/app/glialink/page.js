@@ -2,10 +2,7 @@ import Image from "next/image";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import ProjectHero from "@/components/ProjectHero";
-import ProjectStack from "@/components/ProjectStack";
 import "../../styles/globals.css";
-import ProjectCarousel from "@/components/ProjectCarousel";
-import ProjectGallery from "@/components/ProjectGallery";
 
 export default function Pascal() {
   return (
