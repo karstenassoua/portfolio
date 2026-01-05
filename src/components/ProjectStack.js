@@ -19,7 +19,9 @@ const ProjectStack = ({ context, problem, solution, process, outcomes, reflectio
                             <h2 className="font-bold">{section.title}</h2>
                         </div>
                         <div className="md:w-2/3">
-                            <p>{section.content}</p>
+                            {section.content.split('\n').map((paragraph, i) => (
+                                <p key={i} className="mb-4">{paragraph}</p>
+                            ))}
                         </div>
                     </div>
                 ))}
