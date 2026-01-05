@@ -21,8 +21,8 @@ const Card = ({ image, projectName, url, skills, description, isAwarded, project
                     <div className="flex flex-row gap-2 mb-3.5">
                         {/* Project features */}
                         <h3 className="text-xl font-bold capitalize">{projectName}</h3>
-                        { isAwarded && <img src="/images/trophy.png" alt="Awarded" className="h-5 self-center" />}
-                        { projectLink && <img src="/images/rocket.png" alt="Launched" className='h-5 self-center'/> }
+                        { isAwarded && <Image src="/images/trophy.png" alt="Awarded" className="h-5 self-center" />}
+                        { projectLink && <Image src="/images/rocket.png" alt="Launched" className='h-5 self-center'/> }
                     </div>
                     <div className="flex flex-wrap lg:flex-row gap-2 lg:gap-5 text-sm text-neutral-500 mb-3">
                         {skills.map(skill => <p key={skill} className='border-1 bg-neutral-900 border-neutral-500 rounded-md px-5 py-1 hover:bg-neutral-800'>{skill}</p>)}
